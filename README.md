@@ -1,1 +1,1 @@
-# Partice React Js
+# Practice React Js
