@@ -11,6 +11,7 @@ export const Home = () => {
         <button onClick={() => navigate('order-summary', {replace : true})} >
             Place order
         </button>
+        <p>Hello React</p>
     </>
   )
 }
