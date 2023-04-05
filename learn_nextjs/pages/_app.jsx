@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import '../styles/global.css'
 import {useRouter} from 'next/router'
+import Footer from './footer'
 
 const _app = ({Component, pageProps}) => {
     const router = useRouter();
@@ -23,7 +24,7 @@ const _app = ({Component, pageProps}) => {
             </ul>
         </nav>
         <Component {...pageProps} />
-        <p>Footer</p>
+        <Footer />
     </>
   )
 }
