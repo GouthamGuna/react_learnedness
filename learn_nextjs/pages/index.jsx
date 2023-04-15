@@ -18,7 +18,7 @@ export default function Home(props) {
   
     return {
       props: {
-        forecast: data.properties.periods[0].detailedForecast
+        //forecast: data.properties.periods[0].detailedForecast
       }
     }
   }
