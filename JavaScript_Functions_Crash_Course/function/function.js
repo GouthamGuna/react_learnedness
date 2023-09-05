@@ -91,3 +91,13 @@ function outer(x) {
 const outerReturn = outer(10);
 
 outerReturn(2);
+
+// CallBack Function.
+
+function foo(bar){
+  bar();
+}
+
+foo(function() {
+  console.log('bar');
+})
