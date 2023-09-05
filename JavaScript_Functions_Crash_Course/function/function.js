@@ -101,3 +101,9 @@ function foo(bar){
 foo(function() {
   console.log('bar');
 })
+
+function named(){
+  console.log('bar')
+}
+
+foo(named);
