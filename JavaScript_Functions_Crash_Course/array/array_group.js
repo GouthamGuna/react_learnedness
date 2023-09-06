@@ -25,8 +25,8 @@ const groupByCount = MY_EATABLES.group((item) => {
  return item.count > 1 ? 'On-Track' : 'Needs-Improvements';
 })
 
-//console.log('grouped by type : ', grouped)
+console.log('grouped by type : ', grouped);
 
-//console.log('grouped by map : ', groupByMap)
+//console.log('grouped by map : ', groupByMap);
 
-console.log('grouped by count : ', groupByCount)
+//console.log('grouped by count : ', groupByCount);
