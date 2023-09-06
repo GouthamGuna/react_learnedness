@@ -13,7 +13,20 @@ const MY_EATABLES = [
 ]
 
 const grouped = MY_EATABLES.group((item) => {
-    return item.type;
+  return item.type;
 })
 
-console.log('grouped by type : ', typeGroup)
+
+const groupByMap = MY_EATABLES.groupToMap((item) => {
+  return item.type;
+})
+
+const groupByCount = MY_EATABLES.group((item) => {
+ return item.count > 1 ? 'On-Track' : 'Needs-Improvements';
+})
+
+//console.log('grouped by type : ', grouped)
+
+//console.log('grouped by map : ', groupByMap)
+
+console.log('grouped by count : ', groupByCount)
