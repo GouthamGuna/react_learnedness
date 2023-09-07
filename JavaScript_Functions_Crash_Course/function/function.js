@@ -107,3 +107,32 @@ function named(){
 }
 
 foo(named);
+
+// Higher Order Function`s (HOF)
+
+/**
+ * 1.) It`s takes one are more functions as arguments
+ * 2.) It`s may return a function
+ */
+
+function returnFn(){
+  return function(){
+    console.log('returing');
+  }
+}
+
+const fn = returnFn();
+
+// [1,2,2,3,4,5,6,7].filter(function(element){return element > 5 ? 'hi' : 'hello'});
+
+// Pure function 
+
+function sayGreeting(name){
+  return `Hello ${name}`;
+}
+
+let greeting = 'Welcome come to ';
+
+function helloMoon(moon){
+  return `${greeting} ${moon}`;
+}
