@@ -136,3 +136,54 @@ let greeting = "Welcome come to ";
 function helloMoon(moon) {
   return `${greeting} ${moon}`;
 }
+
+// IIFE ('Immediately Invoked Function Expression')
+
+// code inside the function
+
+function x() {}
+
+/**
+ * function (){
+ *  // error
+ *  // Function stmt require a function name
+ * }
+ */
+
+(function () {})(); // exe
+
+// Recursion
+
+/*
+Recursion base codition.
+
+function recurse(){
+  
+  if(base_condition){
+    // do something
+    return
+  }
+
+  recurse();
+}
+
+*/
+
+function foo() {
+  console.log("foo");
+  foo(); // Maximum call stack is exceeded
+}
+
+const recursionFoo = function buz() {
+  recursionFoo();
+};
+
+function fetchURL(count) {
+  if (count === 0) {
+    console.log("No more left!");
+    return;
+  }
+
+  console.log("fetching...");
+  fetchURL(count - 1);
+}
