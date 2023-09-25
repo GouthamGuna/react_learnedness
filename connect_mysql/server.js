@@ -34,11 +34,11 @@ app.get("/image", (req, res) => {
     });
 });
 
-app.get('/', function (req, res) {
+/* app.get('/', function (req, res) {
   const data = fs.readFileSync('./image.png');
   res.render('page', { image: data.toString('base64') });
-});
+}); */
 
 app.listen(serverPort, () => {
-    console.log("logger : ", 'Server running port ${serverPort}...');
+    console.log("logger : ", `Server running port ${serverPort}.`);
 })
