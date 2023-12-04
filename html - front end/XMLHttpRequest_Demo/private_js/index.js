@@ -6,6 +6,28 @@ $(document).ready(function(){
   $('#data').change(function(){
     document.documentElement.setAttribute('lang', $(data).val())
   })
+  
+  document.title = 'Reference Work | Home';
+  var url = window.location.search;
+  var parsedURL = {};
+  url
+    .substring(1, url.length)
+    .split("&")
+    .forEach(function (each) {
+      var keyVal = each.split(/=(.+)/);
+      parsedURL[keyVal[0]] = keyVal[1];
+      return;
+    });
+  console.log("parsedURL : ", parsedURL);
+
+  var keysOfParsedURL = Object.keys(parsedURL);
+  console.log("keysOfParsedURL : ", keysOfParsedURL);
+
+  const encodedData = btoa("Hello, world!"); // encode a string
+  const decodedData = atob(encodedData); // decode the string
+
+  console.log("encodedData ", encodedData);
+  console.log("decodedData ", decodedData);
 
 });
 
