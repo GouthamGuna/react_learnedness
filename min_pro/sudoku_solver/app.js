@@ -53,11 +53,11 @@ const solve = () => {
   //console.log("data : ", data);
   const options = {
     method: "POST",
-    url: "https://solve-sudoku.p.rapidapi.com/",
+    url: process.env.RAPID_URL,
     headers: {
       "content-type": "application/json",
       "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-      "X-RapidAPI-Host": "solve-sudoku.p.rapidapi.com",
+      "X-RapidAPI-Host": process.env.HOST,
     },
     data: {
       puzzle: data,
