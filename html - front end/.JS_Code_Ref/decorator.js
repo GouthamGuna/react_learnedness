@@ -1,10 +1,6 @@
-
-
-//   <h3><a id="LoggerContext" href="#LoggerContext"><span
-//    class="anchor"/></a>Logger context</h3>
-
 function decorate() {
   var anchor = findAnchorInURL(document.URL);
+  console.log('anchor : ', anchor);
   decoratePropertiesInTables(anchor);
   decorateDoAnchor(anchor);
   decorateConversionWordInTables(anchor);
@@ -12,6 +8,8 @@ function decorate() {
 
 // ----------------------------------------------
 function findAnchorInURL(url) {
+	
+	console.log('url : ', url);
 
  if(url == null) return null
   var index = url.lastIndexOf("#");
@@ -23,6 +21,8 @@ function findAnchorInURL(url) {
 
 // ----------------------------------------------
 function decoratePropertiesInTables(anchor) {
+	
+	console.log('anchor input : ', anchor);
 
  //if(1==1) return;
  var elems = $('tr td:first-child span.prop');
