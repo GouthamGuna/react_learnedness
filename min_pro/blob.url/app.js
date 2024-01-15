@@ -26,7 +26,7 @@ xhr.send(); */
 
 function downloadFileRequest() {
   axios
-    .get("blob:https://videosection.com/6c6e3762-754f-4522-9367-b618d9874a7c", {
+    .get("blob:https://example.com/6c6e3762-754f-4522-9367-b618d9874a7c", {
       responseType: "blob",
       timeout: 30000,
     })
