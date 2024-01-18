@@ -99,3 +99,4 @@ function camelCase(str) {
   return res;
 }
 
+decorate();
