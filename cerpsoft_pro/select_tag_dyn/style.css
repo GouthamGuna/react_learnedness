@@ -1,0 +1,15 @@
+body{
+    padding: 20px;
+    border: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+select{
+    padding: 10px;
+    border: 10px;
+}
+
+div{
+    padding: 10px;
+    border: 10px;
+}
