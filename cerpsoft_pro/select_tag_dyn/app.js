@@ -1,16 +1,25 @@
 var numbers = [24, 27, 28, 40, 44, 323, 434, 42];
 
-(function () {
-  const dayNamesvalue = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
+const dayNamesvalue = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
+(function () {
+  let optionElement = document.querySelector("#name-list");
+  optionElement.options.add(new Option("Please Select", ""));
+
+  dayNamesvalue.forEach((e, i) => {
+    optionElement.options.add(new Option(dayNamesvalue[i], e));
+  });
+})();
+
+(function () {
   let selectElement = document.querySelector("#list");
 
   dayNamesvalue.forEach((element, index) => {
