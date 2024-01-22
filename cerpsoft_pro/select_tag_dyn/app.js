@@ -74,3 +74,42 @@ console.log(result);
 
 const oddArray = numbers.filter((number) => number % 2 !== 0);
 console.log(oddArray);
+
+(function () {
+  let imgAppender = document.querySelector("#mobile-img");
+  let imgTag = document.createElement("img");
+
+  let selectElement = document.querySelector("#mobile-list");
+  selectElement.options.add(new Option("Please Select", ""));
+
+  axios({
+    method: "GET",
+    url: "https://dummyjson.com/products/category/smartphones",
+  }).then(
+    (response) => {
+      console.log(response);
+
+      response.data.products.group((e) => {
+        selectElement.options.add(new Option(e.title, e.id));
+        imgTag.setAttribute("id", e.title);
+
+        e.images.forEach((e) => {
+          imgTag.setAttribute("src", e);
+        });
+
+        imgAppender.appendChild(imgTag);
+      });
+    },
+    (e) => {
+      console.error(e);
+    }
+  );
+})();
+
+(function () {
+  let optionElement = document.querySelector("#mobile-list");
+
+  optionElement.addEventListener("change", function () {
+    // alert(this.value)
+  });
+})();
