@@ -2,6 +2,9 @@ body{
     padding: 20px;
     border: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
 }
 
 select{
@@ -12,4 +15,14 @@ select{
 div{
     padding: 10px;
     border: 10px;
+}
+
+.container #mobile-img{
+    flex-direction: column;
+    gap: 10px;
+}
+
+#mobile-img img{
+    padding: 10px;
+    gap: 20px;
 }
