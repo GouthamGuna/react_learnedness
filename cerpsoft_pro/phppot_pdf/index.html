@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID-Card PDF_Generater</title>
+
+    <link
+      rel="shortcut icon"
+      href="https://gouthamguna.github.io/in/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <form
+        name="foo"
+        method="post"
+        class="input-form"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <label class="form-label">Upload HTML file: </label>
+          <input
+            type="file"
+            id="fileUpload"
+            name="file"
+            class="input-file"
+            accept=".html,.htm"
+          />
+        </div>
+        <div class="preview">
+          <div id="temp-target"></div>
+        </div>
+        <div class="row">
+          <input
+            type="button"
+            value="Show Preview"
+            class="btn-preview"
+            onclick="readHTML()"
+          /><span id="error-message" class="error"></span>
+
+          <input
+            type="button"
+            value="Create PDF"
+            class="btn-generate"
+            onclick="converHTMLFileToPDF()"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
