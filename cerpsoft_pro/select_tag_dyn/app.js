@@ -131,3 +131,21 @@ function clearDiv() {
   let div = document.getElementById("product-images");
   div.replaceChildren();
 }
+
+function getDataJsonFrom() {
+  console.log("getDataJsonFrom function init()...");
+
+  axios({
+    method: 'GET',
+    url: 'data.js'
+  }).then((response) => {
+    
+    let data = JSON.parse(response.data.data);
+    console.log(data)
+    //data && data.length ? console.log(data.question) : "Not Data Found.!";
+  })
+
+  
+}
+
+// getDataJsonFrom();
