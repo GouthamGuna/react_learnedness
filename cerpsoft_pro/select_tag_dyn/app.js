@@ -89,7 +89,7 @@ console.log(oddArray);
       });
     },
     (e) => {
-      console.error(e);
+      console.error(e.message);
     }
   );
 })();
@@ -136,16 +136,32 @@ function getDataJsonFrom() {
   console.log("getDataJsonFrom function init()...");
 
   axios({
-    method: 'GET',
-    url: 'data.js'
+    method: "GET",
+    url: "data.js",
   }).then((response) => {
-    
     let data = JSON.parse(response.data.data);
-    console.log(data)
+    console.log(data);
     //data && data.length ? console.log(data.question) : "Not Data Found.!";
-  })
-
-  
+  });
 }
 
 // getDataJsonFrom();
+
+function randomColorUtility(length) {
+  return Math.floor(Math.random() * length);
+}
+
+function backGroundColor() {
+  const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+  let hexColor = "#";
+
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[randomColorUtility(hex.length)];
+  }
+
+  let style = document.createElement("style");
+  style.textContent = `body { background-color: ${hexColor}; }`;
+  document.head.appendChild(style);
+}
+
+backGroundColor();
