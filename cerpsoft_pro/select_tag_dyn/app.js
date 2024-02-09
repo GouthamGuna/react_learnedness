@@ -20,7 +20,7 @@ const structuredData = {
       name: "GOWTHAM SANKAR GUNASEKARAN",
       jobTitle: "Software Engineer",
       url: "https://gouthamguna.github.io/in/",
-      image: "https://gouthamguna.github.io/in/images/profilepic.jpg",
+      images: ['https://gouthamguna.github.io/in/images/profilepic.jpg', 'https://github.com/GouthamGuna'],
     },
   ],
 };
