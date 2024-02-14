@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Tag Dynamic - UP</title>
+    <link
+      rel="shortcut icon"
+      href="https://gouthamguna.github.io/in/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3.32.1/minified.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <label for="list">Week Name List :</label>
+        <select id="list" name="list" multiple></select>
+      </div>
+      <div>
+        <label for="name-list">Week Name List One :</label>
+        <select id="name-list" name="name-list"></select>
+      </div>
+      <div>
+        <label for="types-food-list">Types Food Name List :</label>
+        <select id="types-food-list" name="types-food-list" onchange="foodsTypesChangeEvent()"></select>
+      </div>
+      <div>
+        <label for="food-list">Food Name List :</label>
+        <select id="food-list" name="food-list"></select>
+      </div>
+      <div>
+        <label for="mobile-list">Mobile Name List :</label>
+        <select id="mobile-list" name="mobile-list"></select>
+      </div>
+      <div id="mobile-img"></div>
+    </div>
+    <script charset="utf-8" src="/js/app.js" data-indexed="true"></script>
+  </body>
+</html>
