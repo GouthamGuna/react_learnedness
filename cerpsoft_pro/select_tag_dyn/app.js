@@ -10,6 +10,21 @@ const dayNamesvalue = [
   "Saturday",
 ];
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  headline: "CERP",
+  author: [
+    {
+      "@type": "Person",
+      name: "GOWTHAM SANKAR GUNASEKARAN",
+      jobTitle: "Software Engineer",
+      url: "https://gouthamguna.github.io/in/",
+      images: ['https://gouthamguna.github.io/in/images/profilepic.jpg', 'https://github.com/GouthamGuna'],
+    },
+  ],
+};
+
 (function () {
   let optionElement = document.querySelector("#name-list");
   optionElement.options.add(new Option("Please Select", ""));
@@ -165,3 +180,10 @@ function backGroundColor() {
 }
 
 backGroundColor();
+
+(function () {
+  let script = document.createElement("script");
+  script.setAttribute("type", "application/ld+json");
+  script.textContent = JSON.stringify(structuredData);
+  document.head.appendChild(script);
+})();
