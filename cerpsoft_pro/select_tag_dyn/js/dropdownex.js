@@ -39,19 +39,23 @@ document.addEventListener("contextmenu", (event) => event.preventDefault());
     "<p style='text-align: center;'>Html selector upgrade learning. Open browser see the <strong>Console </strong>...</p>";
 })();
 
-/* function getLinkedDataFormat() {
+function getLinkedDataFormat() {
+  let scriptTag = document.createElement("script");
+  scriptTag.setAttribute("type", "application/ld+json");
+
   $.ajax({
-    url: "http://sms.cerpsoft.in/krithvik/login.do?method=getLinkedDataFormat",
+    url: "http://sms.cerpsoft.in/education/login.do?method=getLinkedDataFormat",
     type: "GET",
     dataType: "json",
     contentType: false,
     success: function (response) {
-      console.log(response);
+      scriptTag.textContent = JSON.stringify(response);
+      document.head.appendChild(scriptTag);
     },
   });
 }
 
-getLinkedDataFormat(); */
+getLinkedDataFormat();
 
 function loadBasicData() {
   const getbasicObjects = {
