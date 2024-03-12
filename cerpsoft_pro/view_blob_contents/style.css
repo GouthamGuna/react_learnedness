@@ -1,0 +1,19 @@
+body {
+  padding: 05px;
+  border: 0px;
+  align-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: whitesmoke;
+}
+
+a {
+  padding: 10px;
+  border-bottom: 100px;
+  text-align: justify;
+}
+
+img {
+  width: fit-content;
+  padding: 10px;
+  border-bottom: 100px;
+}
