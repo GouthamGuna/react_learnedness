@@ -14,7 +14,7 @@ const getDOMLoader = {
 
   div.appendChild(getDOMLoader.mainHeader());
 
-  getDOMLoader.funExc();
+  // getDOMLoader.funExc();
 })();
 
 function header() {
