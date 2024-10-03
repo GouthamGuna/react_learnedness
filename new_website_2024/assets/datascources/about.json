@@ -1,0 +1,35 @@
+[
+  {
+    "header": [
+      {
+        "title": "Java Full stack developer",
+        "description": "I deliver end-to-end service, developing both front-end components like user interfaces and back-end components like application code and databases."
+      }
+    ],
+    "banner": [
+      {
+        "title": "About Me",
+        "description": "I am a full-stack developer with ~3 years of experience in managing multiple teams. My passion for technology has led me to this stage, where I am able to create innovative and user-friendly solutions for businesses. I have a strong foundation in HTML, CSS, and JavaScript, as well as a deep understanding of various programming languages and frameworks. I am currently working remotely, but I am always open to collaborating on projects with other developers."
+      }
+    ],
+    "left": [
+      { "key": "Birthday : ", "value": "July 24, 1998" },
+      { "key": "Website : ", "value": "https://gouthamguna.github.io/in/" },
+      { "key": "Phone : ", "value": "+91 7868949536" },
+      { "key": "City : ", "value": "Bangalore - KA, IN" }
+    ],
+    "right": [
+      { "key": "Degree : ", "value": "Bachelor of Engineering" },
+      { "key": "Email : ", "value": "ggowthamsankar@gmail.com" },
+      { "key": "Freelance : ", "value": "Available" }
+    ],
+    "footer": [
+      {
+        "text": "Collaborated with engineers and designers to construct and maintain code for the waterfall design system."
+      },
+      {
+        "text": "Improved component reliability by increasing overall test coverage using JUnit Testing Library which helped to identify and fix potential issues early in the development process, resulting in more robust and stable code."
+      }
+    ]
+  }
+]
