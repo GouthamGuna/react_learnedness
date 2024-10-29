@@ -1,0 +1,27 @@
+{
+  "name": "back_end_app",
+  "version": "1.0.0",
+  "description": "this package contains only node js and express js code.",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GouthamGuna/react_learnedness.git"
+  },
+  "author": "gowtham_sankar_gunasekaran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GouthamGuna/react_learnedness/issues"
+  },
+  "homepage": "https://github.com/GouthamGuna/react_learnedness#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mariadb": "^3.4.0",
+    "mysql2": "^3.11.3"
+  }
+}
