@@ -23,6 +23,9 @@ const getDomElement = {
 
     return inputTag;
   },
+  btnTag: () => {
+    return clickButtonTiggerToDownload();
+  },
 };
 
 (function () {
@@ -30,6 +33,7 @@ const getDomElement = {
 
   container.appendChild(getDomElement.h1Tag());
   container.appendChild(getDomElement.aTag());
+  container.appendChild(getDomElement.btnTag());
   container.appendChild(getDomElement.inputTag());
 })();
 
@@ -87,3 +91,49 @@ function fetchingDataConvertBlog() {
 }
 
 fetchingDataConvertBlog();
+
+function clickButtonTiggerToDownload() {
+  let aTag = document.createElement("a");
+
+  let button = document.createElement("button");
+  button.textContent = "Click me";
+
+  button.onclick = () => {
+    alert("Button clicked!");
+    downloadBlobTypeFileContent();
+  };
+
+  aTag.appendChild(button);
+
+  return aTag;
+}
+
+function downloadBlobTypeFileContent() {
+  axios({
+    url: "http://localhost:2020/SANTOSH_COLLEGES/api.html?method=getAvatar",
+    method: "GET",
+    responseType: "blob", // Important: Set the response type to 'blob'
+  }).then((response) => {
+    console.log(response);
+    // Create a file link in the browser's memory
+    const href = URL.createObjectURL(response.data);
+
+    const reader = new FileReader();
+    reader.readAsDataURL(response.data);
+    reader.onloadend = () => {
+      const base64img = reader.result;
+      console.log(base64img);
+
+      // Create an <a> HTML element with the href linked to the file
+      const link = document.createElement("a");
+      link.href = base64img;
+      link.setAttribute("download", "avatar.png"); // Set the desired filename or extension
+      document.body.appendChild(link);
+      link.click();
+
+      // Clean up the dynamically created file link and remove the ObjectURL
+      document.body.removeChild(link);
+      URL.revokeObjectURL(href);
+    };
+  });
+}
