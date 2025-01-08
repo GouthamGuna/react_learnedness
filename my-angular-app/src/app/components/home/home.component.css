@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Creates four equal columns */
+  gap: 10px; /* Space between columns */
+  width: 80%; /* Optional: Set a width for the grid container */
+}
+
+.grid-item {
+  width: 430px; /* Width of each box */
+  height: 100px; /* Height of each box */
+  margin: 10px;
+  background-color: white; /* Background color for grid items */
+  border: 2px solid #ffa901; /* Border for better visibility */
+  padding: 20px; /* Padding inside each grid item */
+  text-align: center; /* Center text inside the grid items */
+}

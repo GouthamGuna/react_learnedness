@@ -1,0 +1,31 @@
+<div class="sub-header">
+  <div class="add-blog-container">
+    <button class="btn-primary" (click)="addBlog()">Add Blog</button>
+  </div>
+  <!-- <div class="blog-filter">
+    <div class="blog-filter-item" *ngFor="let category of categories">
+      <button class="btn" (click)="filterBlogs(category)">
+        {{ category }} ( {{ category_count[category] }} )
+      </button>
+    </div>
+  </div> -->
+
+  <div class="content-scroller">
+    <div class="sub-scroller-content">
+      <div *ngIf="blogDetails.length === 0">
+        <p>No records found.</p>
+      </div>
+
+      <div class="blog-container" *ngFor="let blog of blogDetails">
+        <h1 class="title-header">{{ blog.title }} <span class="category-details">category : {{ blog.category }}</span></h1>
+        
+        <p>Author: {{ blog.author }}</p>
+        <p>Date: {{ blog.date }}</p>
+
+        <div class="blog-content">
+          <div [innerHTML]="getSafeHtml(blog.content)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

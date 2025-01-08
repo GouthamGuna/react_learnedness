@@ -1,0 +1,29 @@
+.left-header {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #2029db;
+}
+
+.left-header span {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+router-outlet {
+  display: block;
+  margin-top: 20px;
+}
+
+.background {
+    background: linear-gradient(90deg, #0b57d0 50%, #c2e7ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
